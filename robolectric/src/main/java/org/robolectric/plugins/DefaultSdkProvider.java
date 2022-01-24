@@ -130,7 +130,11 @@ public class DefaultSdkProvider implements SdkProvider {
               "robolectric",
               robolectricVersion,
               "i" + PREINSTRUMENTED_VERSION);
-      return new DependencyJar("org.robolectric", "android-all-instrumented", version, null);
+      if (Boolean.parseBoolean(System.getProperty("robolectric.usePreinstrumentedJars", "false"))) {
+        return new DependencyJar("org.robolectric", "android-all-instrumented", version, null);
+      } else {
+        return new DependencyJar("org.robolectric", "android-all", version, null);
+      }
     }
 
     @Override
