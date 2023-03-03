@@ -5,11 +5,11 @@ apply plugin: AndroidProjectConfigPlugin
 apply plugin: "jacoco"
 
 android {
-    compileSdk 33
+    compileSdk 32
 
     defaultConfig {
         minSdk 16
-        targetSdk 33
+        targetSdk 32
     }
 
     compileOptions {
@@ -40,8 +40,8 @@ dependencies {
 
     testImplementation "junit:junit:$junitVersion"
     testImplementation "com.google.truth:truth:$truthVersion"
-    testImplementation "androidx.test:core:$axtCoreVersion"
-    testImplementation "androidx.test:runner:$axtRunnerVersion"
+    testImplementation "androidx.test:core:$coreVersion"
+    testImplementation "androidx.test:runner:$axtVersion"
     testImplementation "androidx.test.ext:junit:$axtJunitVersion"
     testImplementation "org.jacoco:org.jacoco.agent:$jacocoVersion:runtime"
 }

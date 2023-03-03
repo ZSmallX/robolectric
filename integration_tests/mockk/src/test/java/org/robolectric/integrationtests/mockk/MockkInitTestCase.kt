@@ -1,4 +1,4 @@
-package org.robolectric.integrationtests.jacoco
+package org.robolectric.integrationtests.mockk
 
 import io.mockk.MockKAnnotations
 import io.mockk.every

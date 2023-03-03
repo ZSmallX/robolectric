@@ -1,4 +1,4 @@
-package org.robolectric.integrationtests.jacoco
+package org.robolectric.integrationtests.mockk
 
 import com.google.common.truth.Truth.assertThat
 import io.mockk.every
